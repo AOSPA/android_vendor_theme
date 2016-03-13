@@ -17,16 +17,14 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_PACKAGE_NAME := org.cyanogenmod.platform-res
+LOCAL_PACKAGE_NAME := cm.theme.platform-res
 LOCAL_CERTIFICATE := platform
 LOCAL_AAPT_FLAGS := --auto-add-overlay
 LOCAL_RESOURCE_DIR := $(addprefix $(LOCAL_PATH)/, res)
 
 # Tell aapt to create "extending (non-application)" resource IDs,
 # since these resources will be used by many apps.
-
-# 0x3f/one less than app id
-LOCAL_AAPT_FLAGS += -x 63
+LOCAL_AAPT_FLAGS += -x
 
 LOCAL_MODULE_TAGS := optional
 
